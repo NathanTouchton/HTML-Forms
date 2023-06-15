@@ -1,0 +1,1 @@
+This is a project for me to learn how to make working HTML contact forms in a Flask application.
