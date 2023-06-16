@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact form test page</title>
+    <style>
+        #name {
+            width: 400px;
+        }
+    </style>
 </head>
 <body>
-    <form action="{{send_email}}" method="post">
+    <form action="{{url_for('send_email')}}" method="post">
         <label>Name: </label>
-        <input type="text" name="name" placeholder="Name">
+        <input required type="text" id="name" name="name" placeholder="Name">
+        <br>
+        <br>
         <label>Message: </label>
-        <input type="input" name="password" placeholder="Message">
+        <br>
+        <textarea required type="input"
+        id="message" name="message" rows="10" cols="50"
+        placeholder="Message"></textarea>
         <button type="submit">Send</button>
     </form>
 </body>
